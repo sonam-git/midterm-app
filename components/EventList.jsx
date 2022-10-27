@@ -1,7 +1,7 @@
 import { Badge, Box, Heading, SimpleGrid, Text, useToast,Link,HStack } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import useAuth from "../hooks/useAuth";
-import { collection, onSnapshot, query, setDoc, where } from "firebase/firestore";
+import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "../firebase";
 import { FaToggleOff, FaToggleOn, FaTrash, FaEdit } from "react-icons/fa";
 import { deleteEvent, toggleEventStatus} from "../api/event";
@@ -11,23 +11,28 @@ const EventList = () => {
     const [events, setEvents] = React.useState([]);
     const { user } = useAuth() || {};
     const toast = useToast();
-    const refreshData = () => {
-        if (!user) {
-            setEvents([]);
-            return;
-        }
-        const q = query(collection(db, "event"), where("user", "==", user.uid));
-        onSnapshot(q, (querySnapchot) => {
-            let ar = [];
-            querySnapchot.docs.forEach((doc) => {
-                ar.push({ id: doc.id, ...doc.data() });
-            });
-            setEvents(ar);
-        });
-    };
-    useEffect(() => {
+    useEffect(
+        () => {
+            const refreshData = () => {
+                if (!user) {
+                    setEvents([]);
+                    return;
+                }
+                const q = query(collection(db, "event"), where("user", "==", user.uid));
+                onSnapshot(q, (querySnapchot) => {
+                    let ar = [];
+                    querySnapchot.docs.forEach((doc) => {
+                        ar.push({ id: doc.id, ...doc.data() });
+                    });
+                    setEvents(ar);
+                });
+            };
+
         refreshData();
-    }, [user]);
+    },
+     [user]
+    );
+  
     const handleEventDelete = async (id) => {
         if (confirm("Are you sure you wanna delete this event?")) {
             deleteEvent(id);

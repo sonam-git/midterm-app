@@ -5,10 +5,14 @@ import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "../firebase";
 import { FaToggleOff, FaToggleOn, FaTrash } from "react-icons/fa";
 import { deleteTodo, toggleTodoStatus } from "../api/todo";
+
 const TodoList = () => {
     const [todos, setTodos] = React.useState([]);
     const { user } = useAuth() || {};
     const toast = useToast();
+
+    useEffect(
+        () => {
     const refreshData = () => {
         if (!user) {
             setTodos([]);
@@ -23,9 +27,12 @@ const TodoList = () => {
             setTodos(ar);
         });
     };
-    useEffect(() => {
         refreshData();
-    }, [user]);
+    },
+     [user]
+     );
+
+     
     const handleTodoDelete = async (id) => {
         if (confirm("Are you sure you wanna delete this todo?")) {
             deleteTodo(id);
