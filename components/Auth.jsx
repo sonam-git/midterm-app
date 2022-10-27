@@ -10,6 +10,11 @@ const Auth = () => {
 const { toggleColorMode, colorMode } = useColorMode();
 const { isLoggedIn, user } = useAuth() || {};
 
+const logOut = () => {
+  auth.signOut();
+  location.assign('/');
+};
+
 const handleAuth = async () => {
 const provider = new GoogleAuthProvider();
 signInWithPopup(auth, provider)
@@ -36,6 +41,14 @@ const credential = GoogleAuthProvider.credentialFromError(error);
 return (
   <Stack direction='column' paddingY="10">
 <Wrap spacing={4}>
+<WrapItem>
+    <Link href="/">
+      <Button size='md'
+  height='48px'
+  width='200px'
+  border='2px'
+  borderColor='green.500'>Home</Button></Link>
+    </WrapItem>
     <WrapItem>
     <Link href="/add-todo">
       <Button size='md'
@@ -44,16 +57,6 @@ return (
   border='2px'
   borderColor='green.500'>Add To Do</Button></Link>
     </WrapItem>
-
-    <WrapItem>
-    <Link href="/">
-      <Button size='md'
-  height='48px'
-  width='200px'
-  border='2px'
-  borderColor='green.500'>All Files</Button></Link>
-    </WrapItem>
-
     <WrapItem>
     <Link href="/add-event">
       <Button size='md'
@@ -75,7 +78,7 @@ return (
 <WrapItem>
 {isLoggedIn && (
 <>
-<Link color="gray.500" onClick={() => auth.signOut()}>
+<Link color="gray.500" onClick={() => logOut()}>
 <Button paddingY="6"colorScheme='red'  variant='outline'>
     Log Out
   </Button>{" "}
