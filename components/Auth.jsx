@@ -9,6 +9,7 @@ import useAuth from "../hooks/useAuth";
 const Auth = () => {
 const { toggleColorMode, colorMode } = useColorMode();
 const { isLoggedIn, user } = useAuth() || {};
+
 const handleAuth = async () => {
 const provider = new GoogleAuthProvider();
 signInWithPopup(auth, provider)
@@ -31,6 +32,7 @@ const credential = GoogleAuthProvider.credentialFromError(error);
 // ...
 });
 };
+//define jsx component return
 return (
   <Stack direction='column' paddingY="10">
 <Wrap spacing={4}>
@@ -83,13 +85,13 @@ return (
 
 </>
 )}
-
 {!isLoggedIn && (
 <Button colorScheme='teal'  variant='outline' leftIcon={<FaGoogle />} onClick={() => handleAuth()}>
 Login with Google
 </Button>
 )}
  </WrapItem>
+ 
  <WrapItem mr="20px">
 <Button paddingY="6" colorScheme='teal'  variant='outline' onClick={() => toggleColorMode()}>
 {colorMode == "dark" ? <FaSun /> : <FaMoon />}
