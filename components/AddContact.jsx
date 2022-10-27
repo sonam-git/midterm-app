@@ -75,7 +75,7 @@ const AddContact = () => {
     
     //return the markup for this addContact JSX component (returning the UI)
     return (
-        <Box w={[100, 300, 500, 700, 900]} margin={"0 auto"} display="block" mt={5}>
+        <Box w="50%" margin={"0 auto"} display="block" mt={5}>
             <Stack direction="column">
                 <Input
                     placeholder="Contact Name"
@@ -104,7 +104,7 @@ const AddContact = () => {
                    
                     disabled={name.length < 1 || number.length < 1 || address.length < 1 || email.length < 1 ||  isLoading}
                    
-                    colorScheme="teal"
+                    colorScheme="green"
                     variant="solid"
                 >
                 Add Contact

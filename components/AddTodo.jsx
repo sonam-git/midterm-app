@@ -42,7 +42,7 @@ setStatus("pending");
 toast({ title: "Todo created successfully", status: "success" });
 };
 return (
-<Box w="40%" margin={"0 auto"} display="block" mt={5}>
+<Box w="50%" margin={"0 auto"} display="block" mt={5}>
 <Stack direction="column">
 <Input
 placeholder="Title"
@@ -71,7 +71,7 @@ Completed ✅
 <Button
 onClick={() => handleTodoCreate()}
 disabled={title.length < 1 || description.length < 1 || isLoading}
-colorScheme="teal"
+colorScheme="green"
 variant="solid"
 >
 Add To Do

@@ -46,7 +46,7 @@ toast({ title: "Event created successfully", status: "success" });
 };
 
 return (
-<Box w="40%" margin={"0 auto"} display="block" mt={5}>
+<Box w="50%" margin={"0 auto"} display="block" mt={5}>
 <Stack direction="column">
 <Input
 placeholder="Event Name"
