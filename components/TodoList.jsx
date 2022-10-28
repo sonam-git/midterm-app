@@ -53,7 +53,7 @@ const TodoList = () => {
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 {todos &&
                     todos.map((todo) => (
-                        <Box p={3} boxShadow="2xl" shadow={"dark-lg"} transition="0.2s" _hover={{ boxShadow: "sm" }} key={todo.id}>
+                        <Box p={3} bg="gray.400" boxShadow="2xl" shadow={"dark-lg"} transition="0.2s" _hover={{ boxShadow: "sm" }} key={todo.id}>
                             <Heading as="h3" fontSize={"xl"}>
                                 {todo.title}{" "}
                                 <Badge

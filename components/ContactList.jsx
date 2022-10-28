@@ -96,7 +96,7 @@ import {
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 { contact &&
                 contact.map((contact) => (
-                    <Box
+                    <Box bg="gray.400"
                         p={3}
                         boxShadow="2xl"
                         shadow={"dark-lg"}

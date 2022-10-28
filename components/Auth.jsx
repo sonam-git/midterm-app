@@ -76,6 +76,7 @@ return (
     </WrapItem>
 
 <WrapItem>
+  <Box>
 {isLoggedIn && (
 <>
 <Link color="gray.500" onClick={() => logOut()}>
@@ -83,7 +84,6 @@ return (
     Log Out
   </Button>{" "}
 </Link>
-
 <Text ml="20px" paddingY="2" paddingX="2" color="green.500"> {user.email}</Text>
 
 </>
@@ -93,10 +93,11 @@ return (
 Login with Google
 </Button>
 )}
+</Box>
  </WrapItem>
  
  <WrapItem mr="20px">
-<Button paddingY="6" colorScheme='teal'  variant='outline' onClick={() => toggleColorMode()}>
+<Button paddingY="6" colorScheme='black'  variant='outline' onClick={() => toggleColorMode()}>
 {colorMode == "dark" ? <FaSun /> : <FaMoon />}
 </Button> </WrapItem>
 

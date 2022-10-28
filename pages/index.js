@@ -9,7 +9,7 @@ import ContactList from "../components/ContactList";
 export default function Home() {
   
   return ( 
-  <Container maxW="7xl" borderRadius="md" >
+  <Container maxW="7xl" borderRadius="md" mb="50px">
     <Auth /> 
   <TodoList />
   <EventList/>

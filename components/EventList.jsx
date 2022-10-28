@@ -55,7 +55,7 @@ const EventList = () => {
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 {events &&
                     events.map((event) => (
-                        <Box p={3} boxShadow="2xl" shadow={"dark-lg"} transition="0.2s" _hover={{ boxShadow: "sm" }} key={event.id}>
+                        <Box p={3} bg="gray.400" boxShadow="2xl" shadow={"dark-lg"} transition="0.2s" _hover={{ boxShadow: "sm" }} key={event.id}>
                             <Heading as="h3" fontSize={"xl"}>
                             <HStack float="right">
                                 <Badge
