@@ -60,8 +60,9 @@ const ContactItem = ({itemData}) =>{
 
   return (
     <>
-    <Auth/>
-    <Box w={[100, 300, 500, 700, 900]} margin={"0 auto"} display="block" mt={5}>
+    <Box ml="5"><Auth/></Box>
+    
+    <Box Box w="50%" margin={"0 auto"} display="block" mt={5}>
             <Stack direction="column">
         
           <Input type="text" value={inputName} onChange={(e) => setName(e.target.value)} placeholder=" Name" />
