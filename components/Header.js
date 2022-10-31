@@ -146,8 +146,8 @@ const Header = () => {
                     <Button leftIcon={<FaGoogle />} onClick={() => handleAuth()} colorScheme='white'  variant='outline'
                     _hover={{
                       textDecoration: 'none',
-                      bg:"black",
-                      color: "white"
+                      bg:"white",
+                      color: "black"
                     }}>
                         Login
                     </Button>
