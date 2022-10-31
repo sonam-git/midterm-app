@@ -108,14 +108,15 @@ const Header = () => {
                   px={2}
                   py={1}
                   rounded={'md'}
+                  href={link.url}
                   _hover={{
                     textDecoration: 'none',
-                    bg: useColorModeValue('gray.200', 'gray.700'),
+                    bg: "white",
                     color: "black"
-                  }}
-                  href={link.url}>
+                  }}>
                   {link.label}
                 </Link>
+                
               ))}
             </HStack>
             
@@ -127,12 +128,12 @@ const Header = () => {
             {isLoggedIn && (
                     <>
                         <HStack spacing='5px'> {/*<Text color="white"> {user.email}</Text>*/}
-                        <Link color="red.500" onClick={() => logOut()} _hover={{
+                        <Link color="red.500" onClick={() => logOut()}  >
+                            <Button paddingY="3"colorScheme='red'  variant='outline' bg="white" _hover={{
                     textDecoration: 'none',
-                    bg: useColorModeValue('red.600', 'red.600'),
+                    bg: "red",
                     color: "white"
-                  }} >
-                            <Button paddingY="3"colorScheme='red'  variant='outline' bg="white">
+                  }}>
                             Logout
                             </Button>
                         </Link>
@@ -145,8 +146,8 @@ const Header = () => {
                     <Button leftIcon={<FaGoogle />} onClick={() => handleAuth()} colorScheme='white'  variant='outline'
                     _hover={{
                       textDecoration: 'none',
-                      bg: useColorModeValue('gray.200', 'gray.700'),
-                      color: "black"
+                      bg:"black",
+                      color: "white"
                     }}>
                         Login
                     </Button>

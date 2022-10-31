@@ -87,20 +87,17 @@ const AddContact = () => {
             <Stack direction="column">
             <InputGroup>
             <InputLeftElement
-      pointerEvents='none'
-      children={<AvatarGroup >
-        <Avatar bg='gray.300' size="xs" /></AvatarGroup>
-     }
-    />
+      pointerEvents='none'>
+      <AvatarGroup >
+        <Avatar bg='gray.300' size="xs" /></AvatarGroup></InputLeftElement>
       <Input  placeholder="Contact Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     />   </InputGroup>
                     <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<PhoneIcon color='gray.300' />}
-    />
+      pointerEvents='none'>
+    <PhoneIcon color='gray.300' /></InputLeftElement>
     <Input type='tel' placeholder='Phone number'
      value={number}
      onChange={(e) => setNumber(e.target.value)} />
@@ -108,9 +105,8 @@ const AddContact = () => {
 
     <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<MdLocationOn color='gray.300' />}
-    />
+      pointerEvents='none'>
+      <MdLocationOn color='gray.300' /></InputLeftElement>
     <Input type='text' placeholder='Address'
      value={address}
      onChange={(e) => setAddress(e.target.value)} />          
@@ -118,9 +114,8 @@ const AddContact = () => {
                           
      <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<EmailIcon color='gray.300' />}
-    />
+      pointerEvents='none'>
+      <EmailIcon color='gray.300' /></InputLeftElement>
     <Input type='text' placeholder='Email'
      value={email}
      onChange={(e) => setEmail(e.target.value)} />

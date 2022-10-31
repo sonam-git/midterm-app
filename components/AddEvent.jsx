@@ -58,9 +58,8 @@ onChange={(e) => setEventname(e.target.value)}
 />
 <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<CalendarIcon color='gray.300' />}
-    />
+      pointerEvents='none'>
+      <CalendarIcon color='gray.300' /></InputLeftElement>
 <Input type="date"
 placeholder="Event Date"
 value={eventdate}

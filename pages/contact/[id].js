@@ -94,27 +94,25 @@ const ContactItem = ({itemData}) =>{
             
 <InputGroup>
 <InputLeftElement
-      pointerEvents='none'
-      children={<AvatarGroup >
-        <Avatar bg='gray.300' size="xs" /></AvatarGroup>
-     }
-    />
+      pointerEvents='none'>
+      <AvatarGroup >
+        <Avatar bg='gray.300' size="xs" /></AvatarGroup></InputLeftElement>
           <Input type="text" value={inputName} onChange={(e) => setName(e.target.value)} placeholder=" Name" /></InputGroup>
           <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<PhoneIcon color='gray.300' />}
-    /><Input type="tel" value={inputNum} onChange={(e) => setNum(e.target.value)} placeholder="Number" /></InputGroup>
+      pointerEvents='none'>
+      <PhoneIcon color='gray.300' /></InputLeftElement>
+    <Input type="tel" value={inputNum} onChange={(e) => setNum(e.target.value)} placeholder="Number" /></InputGroup>
           <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<MdLocationOn color='gray.300' />}
-    /><Input type="text" value={inputAdd} onChange={(e) => setAdd(e.target.value)} placeholder="Address" /></InputGroup>
+      pointerEvents='none'>
+      <MdLocationOn color='gray.300' /></InputLeftElement>
+    <Input type="text" value={inputAdd} onChange={(e) => setAdd(e.target.value)} placeholder="Address" /></InputGroup>
           <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<EmailIcon color='gray.300' />}
-    /> <Input type="text" value={inputEmail} onChange={(e) => setMail(e.target.value)} placeholder="Email" /></InputGroup>
+      pointerEvents='none'>
+      <EmailIcon color='gray.300' /></InputLeftElement> 
+      <Input type="text" value={inputEmail} onChange={(e) => setMail(e.target.value)} placeholder="Email" /></InputGroup>
           <Button
             onClick={() => editContact(itemData)}
            colorScheme= "green"

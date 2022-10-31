@@ -80,9 +80,9 @@ return (
       <Input type="text" value={inputEventName} onChange={(e) => setEventName(e.target.value)} placeholder=" Name" />
       <InputGroup>
     <InputLeftElement
-      pointerEvents='none'
-      children={<CalendarIcon color='gray.300' />}
-    /><Input type="date" value={inputEventDate} onChange={(e) => setEventDate(e.target.value)} placeholder="date" /> </InputGroup>
+      pointerEvents='none'>
+      <CalendarIcon color='gray.300' /></InputLeftElement>
+      <Input type="date" value={inputEventDate} onChange={(e) => setEventDate(e.target.value)} placeholder="date" /> </InputGroup>
       <Button
         onClick={() => editEvent(itemData)}
        colorScheme= "green"
