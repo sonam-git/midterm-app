@@ -6,7 +6,8 @@ import {
     Text,
     useToast,
     Link,
-    HStack
+    HStack,
+    Avatar
     } from "@chakra-ui/react";
     import React, { useEffect} from "react";
     import useAuth from "../hooks/useAuth";
@@ -20,6 +21,8 @@ import {
         MdLocationOn,
       } from 'react-icons/md';
       import { PhoneIcon ,EmailIcon} from '@chakra-ui/icons';
+    
+
     
 
     
@@ -91,6 +94,7 @@ import {
         //FINALLY WE CAN DEFINE THE JSX FOR OUR COMPONENT
         //WE ARE LOOPING THROUGH THE ARRAY THAT CAME BACK TO US IN THE TO DOS
         return (
+           
             <Box mt={5}>
                    <Heading  pb="3px" mb="3px" fontSize={['1.4em', '1.4em', '1.4em', '1.6em', '1.8em']}>Contact List</Heading>
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
@@ -159,6 +163,6 @@ import {
                 ))}
                 </SimpleGrid>
             </Box>
-        );
+            );
     };
     export default ContactList;

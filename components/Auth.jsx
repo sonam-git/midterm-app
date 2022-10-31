@@ -38,7 +38,7 @@ const credential = GoogleAuthProvider.credentialFromError(error);
 });
 };
 //define jsx component return
-return (
+{/*return (
   <Stack direction='column' paddingY="10">
 <Wrap spacing={4}>
 <WrapItem>
@@ -47,7 +47,7 @@ return (
   height='48px'
   width='200px'
   border='2px'
-  borderColor='green.500'>Home</Button></Link>
+  borderColor='white.500'>Home</Button></Link>
     </WrapItem>
     <WrapItem>
     <Link href="/add-todo">
@@ -84,6 +84,7 @@ return (
     Log Out
   </Button>{" "}
 </Link>
+
 <Text ml="20px" paddingY="2" paddingX="2" color="green.500"> {user.email}</Text>
 
 </>
@@ -105,6 +106,6 @@ Login with Google
     </Stack>
     
    
-);
+);*/}
 };
 export default Auth;

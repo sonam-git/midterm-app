@@ -7,7 +7,10 @@ Textarea,
 Stack,
 Select,
 useToast,
+InputGroup,
+    InputLeftElement
 } from "@chakra-ui/react";
+import { CalendarIcon } from "@chakra-ui/icons";
 import useAuth from "../hooks/useAuth";
 import { addEvent } from "../api/event";
 const AddEvent = () => {
@@ -53,11 +56,16 @@ placeholder="Event Name"
 value={eventname}
 onChange={(e) => setEventname(e.target.value)}
 />
+<InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<CalendarIcon color='gray.300' />}
+    />
 <Input type="date"
 placeholder="Event Date"
 value={eventdate}
 onChange={(e) => setEventdate(e.target.value)}
-/>
+/></InputGroup>
 <Select value={status} onChange={(e) => setStatus(e.target.value)}>
 <option
 value={"pending"}

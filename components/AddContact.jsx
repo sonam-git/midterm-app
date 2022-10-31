@@ -10,7 +10,15 @@ import {
     Stack,
     Select,
     useToast,
+    InputGroup,
+    InputLeftElement,
+    AvatarGroup,
+    Avatar
 } from "@chakra-ui/react";
+import { PhoneIcon,EmailIcon  } from "@chakra-ui/icons";
+import {
+    MdLocationOn,
+  } from 'react-icons/md';
 //useAuth function, because this page requires authentication
 import useAuth from "../hooks/useAuth";
 //bring in addTodo from our api
@@ -77,26 +85,46 @@ const AddContact = () => {
     return (
         <Box w="50%" margin={"0 auto"} mb=" 20px" display="block" mt={5}>
             <Stack direction="column">
-                <Input
-                    placeholder="Contact Name"
+            <InputGroup>
+            <InputLeftElement
+      pointerEvents='none'
+      children={<AvatarGroup >
+        <Avatar bg='gray.300' size="xs" /></AvatarGroup>
+     }
+    />
+      <Input  placeholder="Contact Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    />  
-                <Input type="number"
-                    placeholder="Phone Number"
-                    value={number}
-                    onChange={(e) => setNumber(e.target.value)}
-                />
-                <Textarea
-                    placeholder="Address"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                />
-                <Input
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    />
+                    />   </InputGroup>
+                    <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<PhoneIcon color='gray.300' />}
+    />
+    <Input type='tel' placeholder='Phone number'
+     value={number}
+     onChange={(e) => setNumber(e.target.value)} />
+    </InputGroup>
+
+    <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<MdLocationOn color='gray.300' />}
+    />
+    <Input type='text' placeholder='Address'
+     value={address}
+     onChange={(e) => setAddress(e.target.value)} />          
+    </InputGroup>
+                          
+     <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<EmailIcon color='gray.300' />}
+    />
+    <Input type='text' placeholder='Email'
+     value={email}
+     onChange={(e) => setEmail(e.target.value)} />
+    </InputGroup>
                      
                 <Button
                 

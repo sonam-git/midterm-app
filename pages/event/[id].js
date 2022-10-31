@@ -1,11 +1,15 @@
 import React from "react";
 import { useState} from 'react';
+import { ArrowBackIcon,CalendarIcon } from '@chakra-ui/icons'
 import {
     Box,
     Stack,
     Input,
     Button,
-    useToast
+    useToast,
+    Link,
+    InputGroup,
+    InputLeftElement
 } from "@chakra-ui/react";
 import useAuth from "../../hooks/useAuth";
 import  Auth  from '../../components/Auth';
@@ -57,11 +61,28 @@ const editEvent = async (itemData) => {
 return (
 <>
 <Box ml="5"><Auth/></Box>
-<Box Box w="50%" margin={"0 auto"} display="block" mt={5}>
+< Box w="50%" margin={"0 auto"} display="block" mt={5}>
         <Stack direction="column">
+        <Box
+  as="button"
+  p={2}
+  color="white"
+  fontWeight="bold"
+  borderRadius="md"
+  bgGradient="linear(to-r, teal.500,green.500)"
+  _hover={{
+    bgGradient: "linear(to-r, red.500, yellow.500)",
+  }}
+>
+<Link href="/"><ArrowBackIcon/>{" "}Back To Home</Link>
+</Box>
     
       <Input type="text" value={inputEventName} onChange={(e) => setEventName(e.target.value)} placeholder=" Name" />
-      <Input type="date" value={inputEventDate} onChange={(e) => setEventDate(e.target.value)} placeholder="date" />
+      <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<CalendarIcon color='gray.300' />}
+    /><Input type="date" value={inputEventDate} onChange={(e) => setEventDate(e.target.value)} placeholder="date" /> </InputGroup>
       <Button
         onClick={() => editEvent(itemData)}
        colorScheme= "green"
@@ -69,7 +90,6 @@ return (
         >
         Update Event
       </Button>
-    
     </Stack>
     </Box>
 </>

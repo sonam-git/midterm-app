@@ -4,13 +4,26 @@ import {
     Stack,
     Input,
     Button,
-    useToast
+    useToast,
+    Link,
+    InputGroup,
+    InputLeftElement,
+    Avatar,
+    AvatarGroup
 } from "@chakra-ui/react";
+import { ArrowBackIcon } from '@chakra-ui/icons'
 import  Auth  from '../../components/Auth';
+import { PhoneIcon,EmailIcon  } from "@chakra-ui/icons";
+import {
+    MdLocationOn,
+  } from 'react-icons/md';
+
+  
 //import firebase from "../../firebase"
 import {doc, getDoc, setDoc} from "firebase/firestore";
 import { db } from "../../firebase";
 import useAuth from '/hooks/useAuth';
+
 
 
 
@@ -59,16 +72,49 @@ const ContactItem = ({itemData}) =>{
 
 
   return (
+    
     <>
     <Box ml="5"><Auth/></Box>
     
-    <Box Box w="50%" margin={"0 auto"} display="block" mt={5}>
+    <Box w="50%" margin={"0 auto"} display="block" mt={5}>
             <Stack direction="column">
-        
-          <Input type="text" value={inputName} onChange={(e) => setName(e.target.value)} placeholder=" Name" />
-          <Input type="number" value={inputNum} onChange={(e) => setNum(e.target.value)} placeholder="Number" />
-          <Input type="text" value={inputAdd} onChange={(e) => setAdd(e.target.value)} placeholder="Address" />
-          <Input type="text" value={inputEmail} onChange={(e) => setMail(e.target.value)} placeholder="Email" />
+                <Box
+  as="button"
+  p={2}
+  color="white"
+  fontWeight="bold"
+  borderRadius="md"
+  bgGradient="linear(to-r, teal.500,green.500)"
+  _hover={{
+    bgGradient: "linear(to-r, red.500, yellow.500)",
+  }}
+>
+<Link href="/"><ArrowBackIcon/>{" "}Back To Home</Link>
+</Box>
+            
+<InputGroup>
+<InputLeftElement
+      pointerEvents='none'
+      children={<AvatarGroup >
+        <Avatar bg='gray.300' size="xs" /></AvatarGroup>
+     }
+    />
+          <Input type="text" value={inputName} onChange={(e) => setName(e.target.value)} placeholder=" Name" /></InputGroup>
+          <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<PhoneIcon color='gray.300' />}
+    /><Input type="tel" value={inputNum} onChange={(e) => setNum(e.target.value)} placeholder="Number" /></InputGroup>
+          <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<MdLocationOn color='gray.300' />}
+    /><Input type="text" value={inputAdd} onChange={(e) => setAdd(e.target.value)} placeholder="Address" /></InputGroup>
+          <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<EmailIcon color='gray.300' />}
+    /> <Input type="text" value={inputEmail} onChange={(e) => setMail(e.target.value)} placeholder="Email" /></InputGroup>
           <Button
             onClick={() => editContact(itemData)}
            colorScheme= "green"
