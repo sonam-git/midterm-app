@@ -17,10 +17,8 @@ import {
     import { db } from "../firebase";
     import { FaToggleOff, FaToggleOn, FaEdit, FaTrash } from "react-icons/fa";
     import { deleteContact, toggleContactStatus} from "../api/contact";
-    import {
-        MdLocationOn,
-      } from 'react-icons/md';
-      import { PhoneIcon ,EmailIcon} from '@chakra-ui/icons';
+    import { MdLocationOn } from 'react-icons/md';
+    import { PhoneIcon ,EmailIcon} from '@chakra-ui/icons';
     
 
     

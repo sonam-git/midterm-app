@@ -12,8 +12,6 @@ import {
   useColorModeValue,
   useColorMode,
   Stack,
-  Text,
-  NavLink
 } from '@chakra-ui/react';
 import { 
   HamburgerIcon, 
@@ -83,12 +81,16 @@ const Header = () => {
       <Box   color="white" bg={useColorModeValue('teal.500', 'gray.900')} px={4}>
         <Flex   h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
+         
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
-            color={"black"}
+            color={"white"}
+            bg={"teal.500"}
+            colorScheme='white'  variant='outline'
+            
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>
@@ -163,11 +165,10 @@ const Header = () => {
         </Flex>
        
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
+          <Box pb={4} display={{ md: 'none' }} >
+            <Stack as={'nav'} spacing={4} >
               {Links.map((link) => (
                 <Link key={link.url}
-                
                 href={link.url}> {link.label}</Link>
               ))}
             </Stack>
