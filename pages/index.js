@@ -1,22 +1,19 @@
 import React from 'react';
-import { Container } from "@chakra-ui/react";
-import Auth from "../components/Auth";
-import TodoList from "../components/TodoList";
-import EventList from "../components/EventList";
-import ContactList from "../components/ContactList";
+import { Box, Container, Stack,  Heading} from "@chakra-ui/react";
 import Header from "../components/Header";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 
 export default function Home() {
   
   return ( 
-  <Container maxW="7xl" borderRadius="md"  bgGradient='linear(to-r, green.200, pink.500)'>
+  <Container maxW="7xl" borderRadius="md"  bgGradient='linear(to-r, green.200, pink.500)' >
+    
   <Header />
-  <TodoList />
-  <EventList/>
-  <ContactList />
+  <Hero/>
   <Footer/>
+  
   </Container>
  
   );

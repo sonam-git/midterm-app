@@ -82,7 +82,7 @@ const TodoList = () => {
                                     size="xs"
                                     onClick={() => handleToggle(todo.id, todo.status)}
                                 >
-                                    {todo.status == "pending" ? <FaToggleOff size="20px"/> : <FaToggleOn size="20px"/>}
+                                    {todo.status == "pending" ? <FaToggleOff /> : <FaToggleOn />}
                                 </Badge>
                                 <Badge float="right" opacity="0.8" bg={todo.status == "pending" ? "yellow.500" : "green.500"}>
                                     {todo.status}

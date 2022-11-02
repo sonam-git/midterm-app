@@ -71,6 +71,7 @@ const EventList = () => {
                                     onClick={() => handleEventDelete(event.id)}
                                 ><FaTrash size="15px" />
                                 </Badge> 
+
                                 <Badge color="green" bg='black.200'>
                             <Link href={`/event/${event.id}`}>  <FaEdit size="15px"/> </Link> 
                         </Badge>

@@ -1,16 +1,15 @@
 import { Container } from "@chakra-ui/react";
-import AddEvent from "../components/AddEvent";
 import Auth from "../components/Auth";
 import Header from "../components/Header";
+import EventList from "../components/EventList";
 import Footer from "../components/Footer";
-
-export default function AddEventOn() {
+export default function AddToDo() {
 return (
 <Container maxW="7xl" bgGradient='linear(to-r, green.200, pink.500)'>
-<Header/>
+    <Header/>
 <Auth />
-<AddEvent />
-<Footer/>
+<EventList/>
+  <Footer/>
 </Container>
 );
 }

@@ -97,7 +97,7 @@ const AddContact = () => {
                     <InputGroup>
     <InputLeftElement
       pointerEvents='none'>
-    <PhoneIcon color='gray.300' /></InputLeftElement>
+    <PhoneIcon color='black.300' /></InputLeftElement>
     <Input type='tel' placeholder='Phone number'
      value={number}
      onChange={(e) => setNumber(e.target.value)} />
@@ -106,7 +106,7 @@ const AddContact = () => {
     <InputGroup>
     <InputLeftElement
       pointerEvents='none'>
-      <MdLocationOn color='gray.300' /></InputLeftElement>
+      <MdLocationOn color='black.300' /></InputLeftElement>
     <Input type='text' placeholder='Address'
      value={address}
      onChange={(e) => setAddress(e.target.value)} />          
@@ -115,7 +115,7 @@ const AddContact = () => {
      <InputGroup>
     <InputLeftElement
       pointerEvents='none'>
-      <EmailIcon color='gray.300' /></InputLeftElement>
+      <EmailIcon color='black.300' /></InputLeftElement>
     <Input type='text' placeholder='Email'
      value={email}
      onChange={(e) => setEmail(e.target.value)} />

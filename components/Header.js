@@ -41,6 +41,18 @@ const Links = [
   {
     label:'Add Contact',
     url: '/add-contact'
+  },
+  {
+    label:'Contact List',
+    url: '/contact-list'
+  },
+  {
+    label:'To Do List',
+    url: '/todo-list'
+  },
+  {
+    label:'Event List',
+    url: '/event-list'
   }
 ];
 
@@ -78,7 +90,7 @@ const Header = () => {
 
   return (
     <>
-      <Box   color="white" bg={useColorModeValue('teal.500', 'gray.900')} px={4}>
+      <Box   color="white" bg={useColorModeValue('teal.500', 'gray.900')} px={4} >
         <Flex   h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
          
@@ -92,7 +104,7 @@ const Header = () => {
             colorScheme='white'  variant='outline'
             
           />
-          <HStack spacing={8} alignItems={'center'}>
+          <HStack spacing={8} alignItems={'center'}  >
             <Box>
             <Heading as="h1" size="md" letterSpacing={"tighter"}>
               <Link href={'/'}>

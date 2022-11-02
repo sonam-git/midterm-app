@@ -74,6 +74,7 @@ const ContactItem = ({itemData}) =>{
   return (
     
     <>
+   
     <Box ml="5"><Auth/></Box>
     
     <Box w="50%" margin={"0 auto"} display="block" mt={5}>
