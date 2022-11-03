@@ -1,4 +1,4 @@
-import { Badge, Box, Heading, SimpleGrid, Text, useToast } from "@chakra-ui/react";
+import { Badge, Box, Heading, SimpleGrid, Text, useToast,Button } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import useAuth from "../hooks/useAuth";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
@@ -48,8 +48,8 @@ const TodoList = () => {
         });
     };
     return (
-        <Box mt={5}>
-               <Heading  pb="3px" mb="3px" fontSize={['1.4em', '1.4em', '1.4em', '1.6em', '1.8em']}>To Do List</Heading>
+        <Box mt={5} minH={'100vh'}>
+               <Button size='lg' colorScheme='green' mb={5}><Heading  pb="3px" mb="3px" fontSize={['1.4em', '1.4em', '1.4em', '1.6em', '1.8em']}>To Do List</Heading></Button>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 {todos &&
                     todos.map((todo) => (

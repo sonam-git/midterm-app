@@ -7,7 +7,8 @@ import {
     Text,
     useColorModeValue,
     ButtonGroup,
-    IconButton
+    IconButton,
+    Button
   } from '@chakra-ui/react';
   import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
@@ -27,22 +28,23 @@ import {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-          <Text fontSize="sm" color="subtle" alignItems="center"> &copy; {new Date().getFullYear()} CS55.13 SJSHERPA. All rights reserved.</Text>
+          <Text fontSize="sm" color="white" alignItems="center"> &copy; {new Date().getFullYear()} CS55.13 SJSHERPA. All rights reserved.</Text>
           <Stack direction={'row'} spacing={6}>
-          <ButtonGroup variant="ghost" >
+          <ButtonGroup variant="outline" >
           <IconButton
             as="a"
             href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
             aria-label="LinkedIn"
             icon={<FaLinkedin fontSize="1.25rem" />}
           />
-          <IconButton as="a" href="https://github.com/sonam-git/midterm-app.git" aria-label="GitHub" icon={<FaGithub fontSize="1.25rem" />} />
+          <IconButton as="a" href="https://github.com/sonam-git/midterm-app.git" aria-label="GitHub" icon={<FaGithub fontSize="1.25rem" />}  />
           <IconButton
             as="a"
             href="https://twitter.com/i/flow/login"
             aria-label="Twitter"
             icon={<FaTwitter fontSize="1.25rem" />}
           />
+  
         </ButtonGroup>
           </Stack>
         </Container>

@@ -42,7 +42,7 @@ setStatus("pending");
 toast({ title: "Todo created successfully", status: "success" });
 };
 return (
-<Box w="50%" margin={"0 auto"} display="block" mt={5}>
+<Box w="50%" margin={"0 auto"} display="block" mt={5} minH={'100vh'}>
 <Stack direction="column">
 <Input
 placeholder="Title"

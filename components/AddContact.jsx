@@ -83,7 +83,7 @@ const AddContact = () => {
     
     //return the markup for this addContact JSX component (returning the UI)
     return (
-        <Box w="50%" margin={"0 auto"} mb=" 20px" display="block" mt={5}>
+        <Box w="50%" margin={"0 auto"} mb=" 20px" display="block" mt={5} minH={'100vh'}>
             <Stack direction="column">
             <InputGroup>
             <InputLeftElement

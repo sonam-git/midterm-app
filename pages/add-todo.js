@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 export default function AddToDo() {
 return (
-<Container maxW="7xl" bgGradient='linear(to-r, green.200, pink.500)'>
+<Container  maxW="7xl" bgGradient='linear(to-r, green.200, pink.500)'>
 <Header/>
 <Auth />
 <AddTodo />

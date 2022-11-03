@@ -90,7 +90,7 @@ const Header = () => {
 
   return (
     <>
-      <Box   color="white" bg={useColorModeValue('teal.500', 'gray.900')} px={4} >
+      <Box  color="white" bg={useColorModeValue('teal.500', 'gray.900')} px={4} >
         <Flex   h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
          
@@ -103,11 +103,12 @@ const Header = () => {
             bg={"teal.500"}
             colorScheme='white'  variant='outline'
             
+            
           />
           <HStack spacing={8} alignItems={'center'}  >
             <Box>
             <Heading as="h1" size="md" letterSpacing={"tighter"}>
-              <Link href={'/'}>
+              <Link href={'https://portal.santarosa.edu/SRWeb/SR_CourseOutlines.aspx?ck=CS55.13'} isExternal>
                 CS 55.13
               </Link>
               </Heading>

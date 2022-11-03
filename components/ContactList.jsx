@@ -7,7 +7,8 @@ import {
     useToast,
     Link,
     HStack,
-    Avatar
+    Avatar,
+    Button
     } from "@chakra-ui/react";
     import React, { useEffect} from "react";
     import useAuth from "../hooks/useAuth";
@@ -93,8 +94,8 @@ import {
         //WE ARE LOOPING THROUGH THE ARRAY THAT CAME BACK TO US IN THE TO DOS
         return (
            
-            <Box mt={5}>
-                   <Heading  pb="3px" mb="3px" fontSize={['1.4em', '1.4em', '1.4em', '1.6em', '1.8em']}>Contact List</Heading>
+            <Box mt={5} minH={'100vh'}><Button size='lg' colorScheme='green' mb={5}>
+                   <Heading  pb="3px" mb="3px" fontSize={['1.4em', '1.4em', '1.4em', '1.6em', '1.8em']}>Contact List</Heading></Button>
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 { contact &&
                 contact.map((contact) => (
