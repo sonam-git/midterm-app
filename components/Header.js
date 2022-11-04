@@ -12,6 +12,7 @@ import {
   useColorModeValue,
   useColorMode,
   Stack,
+  Avatar
 } from '@chakra-ui/react';
 import { 
   HamburgerIcon, 
@@ -107,11 +108,14 @@ const Header = () => {
           />
           <HStack spacing={8} alignItems={'center'}  >
             <Box>
-            <Heading as="h1" size="md" letterSpacing={"tighter"}>
               <Link href={'https://portal.santarosa.edu/SRWeb/SR_CourseOutlines.aspx?ck=CS55.13'} isExternal>
-                CS 55.13
+              <Avatar
+                  size={'md'}
+                  src={
+                    " "
+                  } 
+                />
               </Link>
-              </Heading>
             </Box>
             <HStack
               as={'nav'}
@@ -124,10 +128,12 @@ const Header = () => {
                   py={1}
                   rounded={'md'}
                   href={link.url}
+                  fontWeight={"bold"} 
                   _hover={{
                     textDecoration: 'none',
                     bg: "white",
-                    color: "black"
+                    color: "black",
+                    fontWeight: "bold"
                   }}>
                   {link.label}
                 </Link>
@@ -179,10 +185,16 @@ const Header = () => {
        
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }} >
-            <Stack as={'nav'} spacing={4} >
+            <Stack as={'nav'} spacing={4}  >
               {Links.map((link) => (
                 <Link key={link.url}
-                href={link.url}> {link.label}</Link>
+                href={link.url}
+                fontWeight={"bold"} 
+                _hover={{
+                  textDecoration: 'none',
+                  color: "yellow",
+                  fontWeight: "bold"
+                }}> {link.label}</Link>
               ))}
             </Stack>
           </Box>

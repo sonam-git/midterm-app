@@ -28,7 +28,7 @@ import {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-          <Text fontSize="sm" color="white" alignItems="center"> &copy; {new Date().getFullYear()} CS55.13 SJSHERPA. All rights reserved.</Text>
+          <Text fontSize="sm" color="white" alignItems="center"> &copy; {new Date().getFullYear()} CS55.13 SJSHERPA. ALL RIGHTS RESERVED.</Text>
           <Stack direction={'row'} spacing={6}>
           <ButtonGroup variant="outline" >
           <IconButton
