@@ -28,14 +28,14 @@ await addDoc(
         console.log(err);
     }
 };
-const toggleTodoStatus = async ( { docId, mystatus }) => {
+const toggleTodoStatus = async ( { docId, status }) => {
     try {
         //grab a reference to an existing firestore document by id
         const todoRef = doc(db, "todo", docId );
         //update that doc
         await updateDoc( todoRef,
             {
-               status :mystatus
+               status
             })
     }catch (err) {
         console.log(err);

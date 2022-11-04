@@ -29,14 +29,14 @@ await addDoc(
     }
 };
 
-const toggleEventStatus = async ( { docId, mystatus }) => {
+const toggleEventStatus = async ( { docId, status }) => {
     try {
         //grab a reference to an existing firestore document by id
         const eventRef = doc(db, "event", docId );
         //update that doc
         await updateDoc( eventRef,
             {
-                status:mystatus 
+                status 
             })
     }catch (err) {
         console.log(err);
